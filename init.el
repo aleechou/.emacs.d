@@ -1,5 +1,29 @@
-(message "hellow alee.....")
+(add-to-list 'load-path user-emacs-directory)
 
+;; session
+(require 'init-sessions)
+
+;; tomorrow theme
+(add-to-list 'load-path "~/.emacs.d/el-get/color-theme/")
+(require 'color-theme)
+(load "~/.emacs.d/el-get/color-theme-tomorrow/GNU Emacs/color-theme-tomorrow.el")
+(eval-after-load "color-theme"
+  '(progn
+      (color-theme-tomorrow-night)))
+
+
+;; 显示行号
+(global-linum-mode 1)
+
+
+;; browse kill ring
+(add-to-list 'load-path "~/.emacs.d/el-get/browse-kill-ring/")
+(require 'browse-kill-ring)
+(global-set-key [(control c)(k)] 'browse-kill-ring)
+(browse-kill-ring-default-keybindings)
+
+
+;; el-get 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 (unless (require 'el-get nil 'noerror)
