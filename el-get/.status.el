@@ -27,6 +27,7 @@
 	   (:name css-mode :description "Minor mode for CSS" :features css-mode :type elpa))
  (el-get status "installed" recipe
 	 (:name el-get :website "https://github.com/dimitri/el-get#readme" :description "Manage the external elisp bits and pieces you depend upon." :type github :branch "4.stable" :pkgname "dimitri/el-get" :features el-get :info "." :load "el-get.el"))
+ (expand-region status "required" recipe nil)
  (js2-mode status "installed" recipe
 	   (:name js2-mode :website "https://github.com/mooz/js2-mode#readme" :description "An improved JavaScript editing mode" :type github :pkgname "mooz/js2-mode" :prepare
 		  (autoload 'js2-mode "js2-mode" nil t)))
@@ -57,4 +58,9 @@
 		 ("xzf")
 		 :load-path
 		 ("lisp")
-		 :url "http://downloads.sourceforge.net/project/emacs-session/session/2.2a/session-2.2a.tar.gz" :autoloads nil)))
+		 :url "http://downloads.sourceforge.net/project/emacs-session/session/2.2a/session-2.2a.tar.gz" :autoloads nil))
+ (undo-tree status "installed" recipe
+	    (:name undo-tree :description "Treat undo history as a tree" :type git :url "http://www.dr-qubit.org/git/undo-tree.git" :prepare
+		   (progn
+		     (autoload 'undo-tree-mode "undo-tree.el" "Undo tree mode; see undo-tree.el for details" t)
+		     (autoload 'global-undo-tree-mode "undo-tree.el" "Global undo tree mode" t)))))

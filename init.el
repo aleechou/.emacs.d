@@ -37,6 +37,10 @@ scroll-step 2)
 	((looking-at "\\s\)") (forward-char 1) (backward-list 1))
 	(t (self-insert-command (or arg 1)))))
 
+;; undo tree
+(add-to-list 'load-path "~/.emacs.d/el-get/undo-tree/")
+(require 'undo-tree)
+(global-undo-tree-mode)
 
 ;; 做个记号
 (global-set-key [(control ?\.)] 'ska-point-to-register)
@@ -57,6 +61,15 @@ that was stored with ska-point-to-register."
         (jump-to-register 8)
         (set-register 8 tmp)))
 
+;; M-s 保存buffer
+(global-set-key (kbd "M-s") 'save-buffer)
+
+;;关闭自动保存模式
+(setq auto-save-mode nil)
+;;不生成 #filename# 临时文件
+(setq auto-save-default nil)
+;; xxx~
+(setq make-backup-files nil)
 
 ;; browse kill ring
 (add-to-list 'load-path "~/.emacs.d/el-get/browse-kill-ring/")
