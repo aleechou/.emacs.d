@@ -23,6 +23,13 @@
       (interactive "p")
       (yank-pop (- arg)))
 (global-set-key "\M-Y" 'yank-pop-forwards)
+;; only press one time M-y
+(defadvice yank-pop (around yank (arg))
+   "If last action was not a yank, run `yank' instead."
+   (if (not (eq last-command 'yank))
+       (yank)
+     ad-do-it))
+ (ad-activate 'yank-pop)
 
 
 ;; copy region or whole line
@@ -113,8 +120,6 @@ that was stored with ska-point-to-register."
 (require 'browse-kill-ring)
 (global-set-key [(control c)(k)] 'browse-kill-ring)
 ;; (browse-kill-ring-default-keybindings)
-
-
 
 
 
