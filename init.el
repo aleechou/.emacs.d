@@ -18,6 +18,12 @@
       (color-theme-tomorrow-night)))
 
 
+;; yank pop forwards
+(defun yank-pop-forwards (arg)
+      (interactive "p")
+      (yank-pop (- arg)))
+(global-set-key "\M-Y" 'yank-pop-forwards)
+
 
 ;; copy region or whole line
 (global-set-key "\M-w"
