@@ -1,5 +1,11 @@
 (add-to-list 'load-path user-emacs-directory)
 
+
+;; expand-region
+(add-to-list 'load-path "~/.emacs.d/el-get/expand-region/")
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 ;; session
 (require 'init-sessions)
 
@@ -76,6 +82,9 @@ that was stored with ska-point-to-register."
 (require 'browse-kill-ring)
 (global-set-key [(control c)(k)] 'browse-kill-ring)
 ;; (browse-kill-ring-default-keybindings)
+
+
+
 
 
 ;; last change pos
