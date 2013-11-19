@@ -18,6 +18,11 @@
       (color-theme-tomorrow-night)))
 
 
+;; 高亮光标所在行
+(require 'hl-line)
+(global-hl-line-mode 1)
+
+
 ;; yank pop forwards
 (defun yank-pop-forwards (arg)
       (interactive "p")
