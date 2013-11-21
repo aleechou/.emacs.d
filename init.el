@@ -22,6 +22,8 @@
 (require 'hl-line)
 (global-hl-line-mode 1)
 
+;; 选区替换
+(delete-selection-mode 1)
 
 ;; yank pop forwards
 (defun yank-pop-forwards (arg)
