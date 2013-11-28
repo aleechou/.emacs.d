@@ -1,10 +1,11 @@
+
 (add-to-list 'load-path user-emacs-directory)
 
 
 ;; expand-region
 (add-to-list 'load-path "~/.emacs.d/el-get/expand-region/")
 (require 'expand-region)
-(global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "M-=") 'er/expand-region)
 
 ;; session
 (require 'init-sessions)
@@ -30,6 +31,7 @@
       (interactive "p")
       (yank-pop (- arg)))
 (global-set-key "\M-Y" 'yank-pop-forwards)
+(global-set-key "\M-V" 'yank-pop-forwards)
 ;; only press one time M-y
 (defadvice yank-pop (around yank (arg))
    "If last action was not a yank, run `yank' instead."
@@ -40,8 +42,7 @@
 
 
 ;; copy region or whole line
-(global-set-key "\M-w"
-(lambda ()
+(defun kill-ring-save-or-whole-line ()
   (interactive)
   (if mark-active
       (kill-ring-save (region-beginning)
@@ -49,10 +50,11 @@
     (progn
      (kill-ring-save (line-beginning-position)
      (line-end-position))
-     (message "copied line")))))
+     (message "copied line"))))
+(global-set-key "\M-w" 'kill-ring-save-or-whole-line)
+
 ;; kill region or whole line
-(global-set-key "\C-w"
-(lambda ()
+(defun kill-region-or-whole-line ()
   (interactive)
   (if mark-active
       (kill-region (region-beginning)
@@ -60,10 +62,14 @@
     (progn
      (kill-region (line-beginning-position)
   (line-end-position))
-     (message "killed line")))))
+     (message "killed line"))))
+(global-set-key "\C-w" 'kill-region-or-whole-line)
+
+;; bind m-c m-v
+(global-set-key "\M-c" 'kill-ring-save-or-whole-line)
+(global-set-key "\M-v" 'yank-pop)
 
 
-;; ----------------------------- 
 ;; 防止鼠标滚动太快
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 2)((control)))
 mouse-wheel-progressive-speed nil
@@ -127,6 +133,20 @@ that was stored with ska-point-to-register."
 (require 'browse-kill-ring)
 (global-set-key [(control c)(k)] 'browse-kill-ring)
 ;; (browse-kill-ring-default-keybindings)
+
+
+;; 隐藏菜单
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(setq inhibit-startup-message t)
+(setq initial-scratch-message "")
+
+
+;; 自动插入
+(add-to-list 'load-path "~/.emacs.d/el-get/yasnippet")
+(require 'yasnippet)
+(setq yas-snippet-dirs '("~/.emacs.d/el-get/yasnippet/snippets"))
+(yas-global-mode 1)
 
 
 
