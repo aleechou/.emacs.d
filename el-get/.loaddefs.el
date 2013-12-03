@@ -3,6 +3,17 @@
 ;;; Code:
 
 
+;;;### (autoloads (auto-complete) "auto-complete/auto-complete" "auto-complete/auto-complete.el"
+;;;;;;  (21149 58379 0 0))
+;;; Generated autoloads from auto-complete/auto-complete.el
+
+(autoload 'auto-complete "auto-complete/auto-complete" "\
+Start auto-completion at current point.
+
+\(fn &optional SOURCES)" t nil)
+
+;;;***
+
 ;;;### (autoloads (browse-kill-ring browse-kill-ring-default-keybindings)
 ;;;;;;  "browse-kill-ring/browse-kill-ring" "browse-kill-ring/browse-kill-ring.el"
 ;;;;;;  (21094 14203 0 0))
@@ -247,6 +258,76 @@ Display a list of packages.
 
 ;;;***
 
+;;;### (autoloads (er/expand-region) "expand-region/expand-region"
+;;;;;;  "expand-region/expand-region.el" (21149 18533 0 0))
+;;; Generated autoloads from expand-region/expand-region.el
+
+(autoload 'er/expand-region "expand-region/expand-region" "\
+Increase selected region by semantic units.
+
+With prefix argument expands the region that many times.
+If prefix argument is negative calls `er/contract-region'.
+If prefix argument is 0 it resets point and mark to their state
+before calling `er/expand-region' for the first time.
+
+\(fn ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads (expand-region-exclude-text-mode-expansions expand-region-reset-fast-key
+;;;;;;  expand-region-contract-fast-key expand-region-fast-keys-enabled
+;;;;;;  expand-region-skip-whitespace expand-region-autocopy-register
+;;;;;;  expand-region-guess-python-mode expand-region-preferred-python-mode
+;;;;;;  expand-region) "expand-region/expand-region-custom" "expand-region/expand-region-custom.el"
+;;;;;;  (21149 18533 0 0))
+;;; Generated autoloads from expand-region/expand-region-custom.el
+
+(let ((loads (get 'expand-region 'custom-loads))) (if (member '"expand-region/expand-region-custom" loads) nil (put 'expand-region 'custom-loads (cons '"expand-region/expand-region-custom" loads))))
+
+(defvar expand-region-preferred-python-mode 'python "\
+The name of your preferred python mode")
+
+(custom-autoload 'expand-region-preferred-python-mode "expand-region/expand-region-custom" t)
+
+(defvar expand-region-guess-python-mode t "\
+If expand-region should attempt to guess your preferred python mode")
+
+(custom-autoload 'expand-region-guess-python-mode "expand-region/expand-region-custom" t)
+
+(defvar expand-region-autocopy-register "" "\
+If set to a string of a single character (try \"e\"), then the
+contents of the most recent expand or contract command will
+always be copied to the register named after that character.")
+
+(custom-autoload 'expand-region-autocopy-register "expand-region/expand-region-custom" t)
+
+(defvar expand-region-skip-whitespace t "\
+If expand-region should skip past whitespace on initial expansion")
+
+(custom-autoload 'expand-region-skip-whitespace "expand-region/expand-region-custom" t)
+
+(defvar expand-region-fast-keys-enabled t "\
+If expand-region should bind fast keys after initial expand/contract")
+
+(custom-autoload 'expand-region-fast-keys-enabled "expand-region/expand-region-custom" t)
+
+(defvar expand-region-contract-fast-key "-" "\
+Key to use after an initial expand/contract to contract once more.")
+
+(custom-autoload 'expand-region-contract-fast-key "expand-region/expand-region-custom" t)
+
+(defvar expand-region-reset-fast-key "0" "\
+Key to use after an initial expand/contract to undo.")
+
+(custom-autoload 'expand-region-reset-fast-key "expand-region/expand-region-custom" t)
+
+(defvar expand-region-exclude-text-mode-expansions '(html-mode nxml-mode) "\
+List of modes which derive from `text-mode' for which text mode expansions are not appropriate.")
+
+(custom-autoload 'expand-region-exclude-text-mode-expansions "expand-region/expand-region-custom" t)
+
+;;;***
+
 ;;;### (autoloads (js2-imenu-extras-mode js2-imenu-extras-setup)
 ;;;;;;  "js2-mode/js2-imenu-extras" "js2-mode/js2-imenu-extras.el"
 ;;;;;;  (21094 12903 0 0))
@@ -381,13 +462,27 @@ See `yas-minor-mode' for more information on Yas minor mode.
 
 ;;;***
 
-;;;### (autoloads nil nil ("color-theme/color-theme-autoloads.el"
+;;;### (autoloads nil nil ("auto-complete/auto-complete-config.el"
+;;;;;;  "auto-complete/auto-complete-pkg.el" "color-theme/color-theme-autoloads.el"
 ;;;;;;  "css-mode/css-mode-autoloads.el" "css-mode/css-mode-pkg.el"
 ;;;;;;  "el-get/el-get-autoloads.el" "el-get/el-get-build.el" "el-get/el-get-byte-compile.el"
 ;;;;;;  "el-get/el-get-core.el" "el-get/el-get-custom.el" "el-get/el-get-dependencies.el"
 ;;;;;;  "el-get/el-get-install.el" "el-get/el-get-methods.el" "el-get/el-get-notify.el"
-;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "yasnippet/yasnippet-debug.el"
-;;;;;;  "yasnippet/yasnippet-tests.el") (21143 28419 979567 0))
+;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "expand-region/cc-mode-expansions.el"
+;;;;;;  "expand-region/clojure-mode-expansions.el" "expand-region/cperl-mode-expansions.el"
+;;;;;;  "expand-region/css-mode-expansions.el" "expand-region/enh-ruby-mode-expansions.el"
+;;;;;;  "expand-region/er-basic-expansions.el" "expand-region/erlang-mode-expansions.el"
+;;;;;;  "expand-region/expand-region-core.el" "expand-region/expand-region-pkg.el"
+;;;;;;  "expand-region/feature-mode-expansions.el" "expand-region/html-mode-expansions.el"
+;;;;;;  "expand-region/js-mode-expansions.el" "expand-region/js2-mode-expansions.el"
+;;;;;;  "expand-region/jsp-expansions.el" "expand-region/latex-mode-expansions.el"
+;;;;;;  "expand-region/nxml-mode-expansions.el" "expand-region/octave-expansions.el"
+;;;;;;  "expand-region/python-el-expansions.el" "expand-region/python-el-fgallina-expansions.el"
+;;;;;;  "expand-region/python-mode-expansions.el" "expand-region/ruby-mode-expansions.el"
+;;;;;;  "expand-region/sml-mode-expansions.el" "expand-region/text-mode-expansions.el"
+;;;;;;  "expand-region/the-org-mode-expansions.el" "expand-region/web-mode-expansions.el"
+;;;;;;  "fuzzy/fuzzy.el" "popup/popup.el" "yasnippet/yasnippet-debug.el"
+;;;;;;  "yasnippet/yasnippet-tests.el") (21149 58394 387739 0))
 
 ;;;***
 

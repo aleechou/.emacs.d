@@ -149,6 +149,9 @@ that was stored with ska-point-to-register."
 (yas-global-mode 1)
 
 
+;; 没有提示音
+(setq ring-bell-function 'ignore)
+
 
 ;; last change pos
 (defvar feng-last-change-pos nil)
@@ -169,6 +172,13 @@ that was stored with ska-point-to-register."
         (message "Last Edit Location"))
     (message "No Change")))
 
+
+;; auto-complete
+(add-to-list 'load-path "~/.emacs.d/el-get/auto-complete")    ; This may not be appeared if you have already added.
+;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(require 'auto-complete)
+(require 'auto-complete-config)
+(ac-config-default)
 
 
 ;; el-get 
