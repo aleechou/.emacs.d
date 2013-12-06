@@ -3,3 +3,4 @@ ac-comphist.dat
 auto-save-list
 frame-restore-parameters
 .emacs.desktop
+.emacs.desktop.lock

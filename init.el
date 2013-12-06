@@ -26,6 +26,15 @@
 ;; 选区替换
 (delete-selection-mode 1)
 
+
+;; enable ShowParenMode
+(setq show-paren-delay 0)
+;(setq show-paren-style 'parenthesis)
+;(setq show-paren-style 'expression)
+(setq show-paren-style 'mixed)
+(show-paren-mode t)
+
+
 ;; yank pop forwards
 (defun yank-pop-forwards (arg)
       (interactive "p")
@@ -174,7 +183,8 @@ that was stored with ska-point-to-register."
 
 
 ;; auto-complete
-(add-to-list 'load-path "~/.emacs.d/el-get/auto-complete")    ; This may not be appeared if you have already added.
+(add-to-list 'load-path "~/.emacs.d/el-get/popup")
+(add-to-list 'load-path "~/.emacs.d/el-get/auto-complete")
 ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (require 'auto-complete)
 (require 'auto-complete-config)
@@ -186,15 +196,17 @@ that was stored with ska-point-to-register."
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
-      (url-retrieve-synchronously
+    (url-retrieve-synchronously
        "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
-(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(el-get 'sync)
+;; (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+;; (el-get 'sync)
 
 
 
 ;; coffee mode
+(add-to-list 'load-path "~/.emacs.d/el-get/coffee-mode")
+(require 'coffee-mode)
 (define-key coffee-mode-map (kbd "C-M-x") 'coffee-compile-file)

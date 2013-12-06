@@ -372,96 +372,6 @@ Major mode for editing JavaScript code.
 
 ;;;***
 
-;;;### (autoloads (global-undo-tree-mode undo-tree-mode) "undo-tree/undo-tree"
-;;;;;;  "undo-tree/undo-tree.el" (21129 37524 0 0))
-;;; Generated autoloads from undo-tree/undo-tree.el
-
-(autoload 'undo-tree-mode "undo-tree/undo-tree" "\
-Toggle undo-tree mode.
-With no argument, this command toggles the mode.
-A positive prefix argument turns the mode on.
-A negative prefix argument turns it off.
-
-Undo-tree-mode replaces Emacs' standard undo feature with a more
-powerful yet easier to use version, that treats the undo history
-as what it is: a tree.
-
-The following keys are available in `undo-tree-mode':
-
-  \\{undo-tree-map}
-
-Within the undo-tree visualizer, the following keys are available:
-
-  \\{undo-tree-visualizer-mode-map}
-
-\(fn &optional ARG)" t nil)
-
-(defvar global-undo-tree-mode nil "\
-Non-nil if Global-Undo-Tree mode is enabled.
-See the command `global-undo-tree-mode' for a description of this minor mode.
-Setting this variable directly does not take effect;
-either customize it (see the info node `Easy Customization')
-or call the function `global-undo-tree-mode'.")
-
-(custom-autoload 'global-undo-tree-mode "undo-tree/undo-tree" nil)
-
-(autoload 'global-undo-tree-mode "undo-tree/undo-tree" "\
-Toggle Undo-Tree mode in all buffers.
-With prefix ARG, enable Global-Undo-Tree mode if ARG is positive;
-otherwise, disable it.  If called from Lisp, enable the mode if
-ARG is omitted or nil.
-
-Undo-Tree mode is enabled in all buffers where
-`turn-on-undo-tree-mode' would do it.
-See `undo-tree-mode' for more information on Undo-Tree mode.
-
-\(fn &optional ARG)" t nil)
-
-;;;***
-
-;;;### (autoloads (yas-global-mode yas-minor-mode) "yasnippet/yasnippet"
-;;;;;;  "yasnippet/yasnippet.el" (21143 28419 0 0))
-;;; Generated autoloads from yasnippet/yasnippet.el
-
-(autoload 'yas-minor-mode "yasnippet/yasnippet" "\
-Toggle YASnippet mode.
-
-When YASnippet mode is enabled, `yas-expand', normally bound to
-the TAB key, expands snippets of code depending on the major
-mode.
-
-With no argument, this command toggles the mode.
-positive prefix argument turns on the mode.
-Negative prefix argument turns off the mode.
-
-Key bindings:
-\\{yas-minor-mode-map}
-
-\(fn &optional ARG)" t nil)
-
-(defvar yas-global-mode nil "\
-Non-nil if Yas-Global mode is enabled.
-See the command `yas-global-mode' for a description of this minor mode.
-Setting this variable directly does not take effect;
-either customize it (see the info node `Easy Customization')
-or call the function `yas-global-mode'.")
-
-(custom-autoload 'yas-global-mode "yasnippet/yasnippet" nil)
-
-(autoload 'yas-global-mode "yasnippet/yasnippet" "\
-Toggle Yas minor mode in all buffers.
-With prefix ARG, enable Yas-Global mode if ARG is positive;
-otherwise, disable it.  If called from Lisp, enable the mode if
-ARG is omitted or nil.
-
-Yas minor mode is enabled in all buffers where
-`yas-minor-mode-on' would do it.
-See `yas-minor-mode' for more information on Yas minor mode.
-
-\(fn &optional ARG)" t nil)
-
-;;;***
-
 ;;;### (autoloads nil nil ("auto-complete/auto-complete-config.el"
 ;;;;;;  "auto-complete/auto-complete-pkg.el" "color-theme/color-theme-autoloads.el"
 ;;;;;;  "css-mode/css-mode-autoloads.el" "css-mode/css-mode-pkg.el"
@@ -481,8 +391,7 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "expand-region/python-mode-expansions.el" "expand-region/ruby-mode-expansions.el"
 ;;;;;;  "expand-region/sml-mode-expansions.el" "expand-region/text-mode-expansions.el"
 ;;;;;;  "expand-region/the-org-mode-expansions.el" "expand-region/web-mode-expansions.el"
-;;;;;;  "fuzzy/fuzzy.el" "popup/popup.el" "yasnippet/yasnippet-debug.el"
-;;;;;;  "yasnippet/yasnippet-tests.el") (21149 58394 387739 0))
+;;;;;;  "fuzzy/fuzzy.el" "popup/popup.el") (21153 14316 923384 0))
 
 ;;;***
 
