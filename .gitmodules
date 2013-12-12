@@ -1,0 +1,3 @@
+[submodule "el-get/coffee-mode"]
+	path = el-get/coffee-mode
+	url = http://github.com/defunkt/coffee-mode.git
