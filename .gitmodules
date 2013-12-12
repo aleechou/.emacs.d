@@ -1,3 +1,6 @@
 [submodule "el-get/coffee-mode"]
 	path = el-get/coffee-mode
 	url = http://github.com/defunkt/coffee-mode.git
+[submodule "el-get/js2-mode"]
+	path = el-get/js2-mode
+	url = http://github.com/mooz/js2-mode.git
