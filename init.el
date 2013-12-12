@@ -26,7 +26,6 @@
 ;; 选区替换
 (delete-selection-mode 1)
 
-
 ;; enable ShowParenMode
 (setq show-paren-delay 0)
 ;(setq show-paren-style 'parenthesis)
