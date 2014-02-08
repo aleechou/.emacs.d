@@ -1,6 +1,20 @@
 
 (add-to-list 'load-path user-emacs-directory)
 
+;; 编辑远程文件
+(require 'tramp)
+
+;; 
+(set-clipboard-coding-system 'ctext)
+
+
+;; evil
+(add-to-list 'load-path "~/.emacs.d/evil") 
+(require 'evil) 
+(evil-mode 1) ; 
+
+(setq evil-default-state 'emacs) 
+(define-key evil-emacs-state-map (kbd "C-o") 'evil-execute-in-normal-state) 
 
 ;; expand-region
 (add-to-list 'load-path "~/.emacs.d/el-get/expand-region/")
@@ -18,7 +32,6 @@
   '(progn
       (color-theme-tomorrow-night)))
 
-
 ;; 高亮光标所在行
 (require 'hl-line)
 (global-hl-line-mode 1)
@@ -26,7 +39,7 @@
 ;; 选区替换
 (delete-selection-mode 1)
 
-;; enable ShowParenMode
+;; enable showparenmode
 (setq show-paren-delay 0)
 ;(setq show-paren-style 'parenthesis)
 ;(setq show-paren-style 'expression)
@@ -209,3 +222,10 @@ that was stored with ska-point-to-register."
 (add-to-list 'load-path "~/.emacs.d/el-get/coffee-mode")
 (require 'coffee-mode)
 (define-key coffee-mode-map (kbd "C-M-x") 'coffee-compile-file)
+
+
+;; 调整竖分窗口的大小
+(global-set-key "\C-V" 'shrink-window)
+(global-set-key "\C-^" 'enlarge-window)
+(global-set-key (kbd "C-{") 'shrink-window-horizontally)
+(global-set-key (kbd "C-}") 'enlarge-window-horizontally)

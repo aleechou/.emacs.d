@@ -35,7 +35,7 @@ Display items in the `kill-ring' in another buffer.
 ;;;***
 
 ;;;### (autoloads (coffee-mode) "coffee-mode/coffee-mode" "coffee-mode/coffee-mode.el"
-;;;;;;  (21094 13110 0 0))
+;;;;;;  (21161 20601 0 0))
 ;;; Generated autoloads from coffee-mode/coffee-mode.el
 
 (autoload 'coffee-mode "coffee-mode/coffee-mode" "\
@@ -258,6 +258,13 @@ Display a list of packages.
 
 ;;;***
 
+;;;### (autoloads nil "evil/evil-core" "evil/evil-core.el" (21167
+;;;;;;  48779 0 0))
+;;; Generated autoloads from evil/evil-core.el
+ (autoload 'evil-mode "evil" "Toggle evil in all buffers" t)
+
+;;;***
+
 ;;;### (autoloads (er/expand-region) "expand-region/expand-region"
 ;;;;;;  "expand-region/expand-region.el" (21149 18533 0 0))
 ;;; Generated autoloads from expand-region/expand-region.el
@@ -328,42 +335,6 @@ List of modes which derive from `text-mode' for which text mode expansions are n
 
 ;;;***
 
-;;;### (autoloads (js2-imenu-extras-mode js2-imenu-extras-setup)
-;;;;;;  "js2-mode/js2-imenu-extras" "js2-mode/js2-imenu-extras.el"
-;;;;;;  (21094 12903 0 0))
-;;; Generated autoloads from js2-mode/js2-imenu-extras.el
-
-(autoload 'js2-imenu-extras-setup "js2-mode/js2-imenu-extras" "\
-
-
-\(fn)" nil nil)
-
-(autoload 'js2-imenu-extras-mode "js2-mode/js2-imenu-extras" "\
-Toggle Imenu support for frameworks and structural patterns.
-
-\(fn &optional ARG)" t nil)
-
-;;;***
-
-;;;### (autoloads (js2-mode js2-minor-mode) "js2-mode/js2-mode" "js2-mode/js2-mode.el"
-;;;;;;  (21094 12903 0 0))
-;;; Generated autoloads from js2-mode/js2-mode.el
-
-(autoload 'js2-minor-mode "js2-mode/js2-mode" "\
-Minor mode for running js2 as a background linter.
-This allows you to use a different major mode for JavaScript editing,
-such as `espresso-mode', while retaining the asynchronous error/warning
-highlighting features of `js2-mode'.
-
-\(fn &optional ARG)" t nil)
-
-(autoload 'js2-mode "js2-mode/js2-mode" "\
-Major mode for editing JavaScript code.
-
-\(fn)" t nil)
-
-;;;***
-
 ;;;### (autoloads nil "session/lisp/session" "session/lisp/session.el"
 ;;;;;;  (16194 36487 0 0))
 ;;; Generated autoloads from session/lisp/session.el
@@ -378,7 +349,12 @@ Major mode for editing JavaScript code.
 ;;;;;;  "el-get/el-get-autoloads.el" "el-get/el-get-build.el" "el-get/el-get-byte-compile.el"
 ;;;;;;  "el-get/el-get-core.el" "el-get/el-get-custom.el" "el-get/el-get-dependencies.el"
 ;;;;;;  "el-get/el-get-install.el" "el-get/el-get-methods.el" "el-get/el-get-notify.el"
-;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "expand-region/cc-mode-expansions.el"
+;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "evil/evil-commands.el"
+;;;;;;  "evil/evil-common.el" "evil/evil-digraphs.el" "evil/evil-ex.el"
+;;;;;;  "evil/evil-integration.el" "evil/evil-macros.el" "evil/evil-maps.el"
+;;;;;;  "evil/evil-pkg.el" "evil/evil-repeat.el" "evil/evil-search.el"
+;;;;;;  "evil/evil-states.el" "evil/evil-tests.el" "evil/evil-types.el"
+;;;;;;  "evil/evil-vars.el" "evil/evil.el" "expand-region/cc-mode-expansions.el"
 ;;;;;;  "expand-region/clojure-mode-expansions.el" "expand-region/cperl-mode-expansions.el"
 ;;;;;;  "expand-region/css-mode-expansions.el" "expand-region/enh-ruby-mode-expansions.el"
 ;;;;;;  "expand-region/er-basic-expansions.el" "expand-region/erlang-mode-expansions.el"
@@ -391,7 +367,7 @@ Major mode for editing JavaScript code.
 ;;;;;;  "expand-region/python-mode-expansions.el" "expand-region/ruby-mode-expansions.el"
 ;;;;;;  "expand-region/sml-mode-expansions.el" "expand-region/text-mode-expansions.el"
 ;;;;;;  "expand-region/the-org-mode-expansions.el" "expand-region/web-mode-expansions.el"
-;;;;;;  "fuzzy/fuzzy.el" "popup/popup.el") (21153 14316 923384 0))
+;;;;;;  "fuzzy/fuzzy.el" "popup/popup.el") (21167 48784 250829 0))
 
 ;;;***
 
