@@ -224,6 +224,15 @@ that was stored with ska-point-to-register."
 (define-key coffee-mode-map (kbd "C-M-x") 'coffee-compile-file)
 
 
+;; lua mode
+(add-to-list 'load-path "~/.emacs.d/el-get/lua-mode")
+(require 'lua-mode)
+
+
+;; 为 eshell 设置 $PATH
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+
+
 ;; 调整竖分窗口的大小
 (global-set-key "\C-V" 'shrink-window)
 (global-set-key "\C-^" 'enlarge-window)
