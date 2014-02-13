@@ -238,3 +238,7 @@ that was stored with ska-point-to-register."
 (global-set-key "\C-^" 'enlarge-window)
 (global-set-key (kbd "C-{") 'shrink-window-horizontally)
 (global-set-key (kbd "C-}") 'enlarge-window-horizontally)
+
+
+;; 加载 buffer-move
+(require 'buffer-move)
